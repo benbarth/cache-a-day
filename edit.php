@@ -21,6 +21,7 @@ if (isset($_POST['submit'])) {
 	$destFile = $destFolder . "mrbarth.gpx";
 	if (move_uploaded_file($srcFile, $destFile)) {
 		print('OK');
+		print('<script>window.location.replace("./");</script>');
 	} else {
 		print('NO');
 	}
